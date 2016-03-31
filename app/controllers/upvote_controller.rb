@@ -1,4 +1,6 @@
-class UpvoteController < ApplicationController
+class UpvotesController < ApplicationController
+  def index
+    @upvotes = Upvote.all
   def create
   end
 

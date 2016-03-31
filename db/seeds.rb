@@ -10,10 +10,10 @@
   user = User.create!(name: Faker::Name.name,
                       username: Faker::Internet.user_name)
   5.times do
-  Link.create!(title: Faker::Internet.url,
+  link = Link.create!(title: Faker::Internet.url,
               body: Faker::Hipster.sentence,
               user_id: user.id)
-    (1..100).times do
+    rand(1..100).times do
       Upvote.create!(link_id: link.id)
     end
   end
