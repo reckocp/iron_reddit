@@ -1,6 +1,6 @@
 class LinksController < ApplicationController
   def index
-    @links = Link.all
+    @links = Link.all.sort_by { |l| [l.scores, l.title] }.reverse!
   end
 
   def show
@@ -11,4 +11,6 @@ class LinksController < ApplicationController
       render_not_found
     end
   end
+
+
 end

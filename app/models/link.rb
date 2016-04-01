@@ -4,11 +4,15 @@ class Link < ActiveRecord::Base
 
   validates :title, presence: true
 
+
   def scores
     upvotes.count
   end
-  
+
   def vote
     upvotes.count + 1
   end
+
+
+
 end
