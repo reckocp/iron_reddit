@@ -3,7 +3,7 @@ class Link < ActiveRecord::Base
   has_many :upvotes
 
   validates :title, presence: true
-
+  
 
   def scores
     upvotes.count
